@@ -1,0 +1,48 @@
+function Footer() {
+  return (
+    <footer className="mb-12 mt-10 w-full  p-10 border-t-[1px] border-[#4b597d]">
+      <div className="flex space-x-10 justify-center">
+        {" "}
+        <a
+          href="https://www.github.com/realrufans"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg"
+            width="32"
+            height="32"
+          />
+        </a>{" "}
+        <a
+          href="https://www.linkedin.com/in/realrufans/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg"
+            width="32"
+            height="32"
+          />
+        </a>{" "}
+        <a
+          href="https://www.twitter.com/realrufans22"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg"
+            width="32"
+            height="32"
+          />
+        </a>
+      </div>
+
+      <p className="text-base mt-2 text-center">
+        Copyright © 2022 | All rights reserved
+      </p>
+    </footer>
+  );
+}
+
+export default Footer;
