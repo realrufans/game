@@ -158,7 +158,7 @@ export default function Home() {
               with web development standards to build dynamic websites.
             </p>
             <p>
-              I'm now embarking on a Web3 journey while working with Solidity
+              I&#39;m now embarking on a Web3 journey while working with Solidity
               and Nextjs or Vitejs to communicate with smart contracts.
             </p>
 
