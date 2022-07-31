@@ -56,7 +56,7 @@ export default function Home() {
             <div className="max-w-lg ">
               <p className="text-[#b4bcd1] mb-3 text-base text-center lg:text-start md:text-xl leading-7">
                 {" "}
-                Hi, I’m Solomon, I enjoy helping people/companies achieve their
+                Hi, I&#39;m Solomon, I enjoy helping people/companies achieve their
                 project goals with my web development skills
               </p>
               <p className="text-[#FBFBFB] lg:text-start  text-3xl md:text-4xl text-center font-bold lg:text-5xl">
