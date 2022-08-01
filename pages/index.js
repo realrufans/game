@@ -8,6 +8,7 @@ import { projects } from "../utils/projectsData";
 import Link from "next/link";
 import Footer from "../components/footer";
 import Header from "../components/header";
+import Image from "next/image";
 export default function Home() {
   const [color, setColor] = useState({});
   const workspaceSettings = {
@@ -56,8 +57,8 @@ export default function Home() {
             <div className="max-w-lg ">
               <p className="text-[#b4bcd1] mb-3 text-base text-center lg:text-start md:text-xl leading-7">
                 {" "}
-                Hi, I&#39;m Solomon, I enjoy helping people/companies achieve their
-                project goals with my web development skills
+                Hi, I&#39;m Solomon, I enjoy helping people/companies achieve
+                their project goals with my web development skills
               </p>
               <p className="text-[#FBFBFB] lg:text-start  text-3xl md:text-4xl text-center font-bold lg:text-5xl">
                 Permit me to make the world a better place with
@@ -111,10 +112,19 @@ export default function Home() {
                   <h2 className="text-[#FBFBFB] text-2xl font-bold">
                     {project.name}
                   </h2>
-                  <img
+                  {/* <img
                     className="h-full w-full max-w-md lg:hidden"
                     src={project.thumbnail}
-                  />
+                  /> */}
+                  <div className="lg:hidden">
+                    <Image
+                      width={500}
+                      height={250}
+                      loading={"eager"}
+                      className=" max-w-xl  lg:inline-flex hidden"
+                      src={project.thumbnail}
+                    />
+                  </div>
                   <p className="leading-6 lg:text-xl">{project.description}</p>
                   <p className=" italic text-sm  text-[#FBFBFB]">
                     {" "}
@@ -129,10 +139,14 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <img
-                  className="h-full w-full max-w-xl  lg:inline-flex hidden"
-                  src={project.thumbnail}
-                />
+                <div className="h-full w-full max-w-xl  lg:inline-flex hidden">
+                  <Image
+                    width={500}
+                    height={250}
+                    loading={"eager"}
+                    src={project.thumbnail}
+                  />
+                </div>
               </div>
             );
           })}
@@ -144,10 +158,16 @@ export default function Home() {
           className=" flex mt-16 lg:mt-36 justify-between mx-auto max-w-lg   lg:max-w-4xl   w-full text-center lg:text-start  flex-col lg:flex-row "
           id="about"
         >
-          <img
-            src="/images/rufans.png"
-            className="rounded-full h-40  w-40  hidden lg:inline-flex lg:self-center "
-          />
+          <div className=" hidden lg:inline-flex lg:self-center ">
+            <Image
+              width={160}
+              height={160}
+              loading={"eager"}
+              src={"/images/rufans.png"}
+              className="rounded-full "
+            />
+          </div>
+
           <div className="max-w-3xl space-y-5 lg:space-x-10 leading-6 text-base  md:text-xl  ">
             <h1 className="font-bold text-4xl text-[#FBFBFB] lg:text-center md:text-5xl  ">
               About Me
@@ -158,15 +178,25 @@ export default function Home() {
               with web development standards to build dynamic websites.
             </p>
             <p>
-              I&#39;m now embarking on a Web3 journey while working with Solidity
-              and Nextjs or Vitejs to communicate with smart contracts.
+              I&#39;m now embarking on a Web3 journey while working with
+              Solidity and Nextjs or Vitejs to communicate with smart contracts.
             </p>
 
             <div className="flex items-center gap-x-5 mx-auto lg:mx-0 max-w-xs text-start">
-              <img
+              {/* <img
                 src="/images/rufans.png"
                 className="rounded-full h-12 w-12 lg:hidden "
-              />
+              /> */}
+
+              <div className=" lg:hidden ">
+                <Image
+                  width={48}
+                  height={48}
+                  loading={"eager"}
+                  src={"/images/rufans.png"}
+                  className="rounded-full "
+                />
+              </div>
               <div>
                 <h2 className="font-bold text-xl  text-[#FBFBFB] ">
                   Solomon Emetonjo

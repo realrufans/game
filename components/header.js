@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 function Header() {
   return (
@@ -6,10 +7,12 @@ function Header() {
         <div className=" flex space-x-3 items-center cursor-pointer">
           {/* <MenuAlt1Icon className="h-9 sm:hidden" /> */}
 
-          <img
+          <Image
+            width={44}
+            height={44}
+            loading={"eager"}
             src={"/images/rufans.png"}
-            className="rounded-full h-11 w-11"
-            alt="solomon emetonjo picture"
+            className="rounded-full"
           />
 
           <h1 className="hidden sm:inline-block font-bold font-inter text-base max-w-[100px] ">
