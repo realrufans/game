@@ -1,12 +1,12 @@
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Solomon Emetonjo
-========================================================================================================================================
+# Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Solomon Emetonjo
 
-Front-End developer, I've been learning to code for 1.5 years. I worked with HTML, CSS, JavaScript, react, tailwindcss, and firebase for storing Data.
+Front-End developer, I've been learning to code for 2 years. I worked with HTML, CSS, JavaScript, react, tailwindcss, and firebase for storing Data.
 
-* 🌍  I'm based in Lagos, Nigeria
-* ✉️  You can contact me at [solomonstephen27@ymail.com](mailto:solomonstephen27@ymail.com)
-* 🧠  I'm learning Web3
-* 🤝  I'm open to collaborating on Front-end projects
+- 🌍 I'm based in Lagos, Nigeria
+- [My portfolio](https://realrufans.vercel.app/)
+- ✉️ You can contact me at [solomonstephen27@ymail.com](mailto:solomonstephen27@ymail.com)
+- 🧠 I'm learning Web3
+- 🤝 I'm open to collaborating on Front-end projects
 
 ### Skills
 
@@ -26,7 +26,6 @@ Front-End developer, I've been learning to code for 1.5 years. I worked with HTM
 ### Socials
 
 <p align="left"> <a href="https://www.github.com/realrufans" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" width="32" height="32" /></a> <a href="https://www.linkedin.com/in/realrufans/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg" width="32" height="32" /></a> <a href="https://www.twitter.com/realrufans22" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg" width="32" height="32" /></a></p>
-
 
 <b>My GitHub Stats</b>
 
