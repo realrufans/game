@@ -11,6 +11,7 @@ function Footer() {
           <img
             src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg"
             width="32"
+            alt="github"
             height="32"
           />
         </a>{" "}
@@ -22,6 +23,7 @@ function Footer() {
           <img
             src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg"
             width="32"
+            alt="linkedin"
             height="32"
           />
         </a>{" "}
@@ -33,6 +35,7 @@ function Footer() {
           <img
             src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/twitter.svg"
             width="32"
+            alt="twitter"
             height="32"
           />
         </a>

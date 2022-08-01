@@ -153,6 +153,7 @@ export default function Home() {
             <Image
               width={150}
               layout="fixed"
+              alt="solomon emetonjo"
               height={150}
               objectFit="cover"
               quality={100}
