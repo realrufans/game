@@ -128,11 +128,11 @@ function Contact() {
                 <button
                   disabled
                   type="button"
-                  class="  bg-green-900   text-[#f4f4f4]  text-lg p-3 w-full  font-bold rounded-xl"
+                  className="  bg-green-900   text-[#f4f4f4]  text-lg p-3 w-full  font-bold rounded-xl"
                 >
                   <svg
                     role="status"
-                    class="inline mr-3 w-4 h-4 text-white animate-spin"
+                    className="inline mr-3 w-4 h-4 text-white animate-spin"
                     viewBox="0 0 100 101"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
