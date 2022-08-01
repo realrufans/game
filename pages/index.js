@@ -19,14 +19,7 @@ export default function Home() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const paperPlaneSettings = {
-    loop: true,
-    autoplay: true,
-    animationData: paperplane,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+
 
   return (
     <>
@@ -71,7 +64,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="cursor-text self-center z-10 w-full max-w-sm lg:max-w-md lg:mt-0   mt-10">
-              <Lottie options={workspaceSettings} />
+              {/* <Lottie options={workspaceSettings} /> */}
             </div>
           </div>
 
