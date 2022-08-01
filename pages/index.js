@@ -104,12 +104,10 @@ export default function Home() {
                   <h2 className="text-[#FBFBFB] text-2xl font-bold">
                     {project.name}
                   </h2>
-                  {/* <img
-                    className="h-full w-full max-w-md lg:hidden"
-                    src={project.thumbnail}
-                  /> */}
+
                   <div className="lg:hidden">
                     <Image
+                      alt={project.alt}
                       width={500}
                       height={250}
                       loading={"eager"}
@@ -133,6 +131,7 @@ export default function Home() {
                 </div>
                 <div className="h-full w-full max-w-xl  lg:inline-flex hidden">
                   <Image
+                    alt={project.alt}
                     width={500}
                     height={250}
                     loading={"eager"}
@@ -155,7 +154,7 @@ export default function Home() {
               width={150}
               layout="fixed"
               height={150}
-              objectFit='cover'
+              objectFit="cover"
               quality={100}
               loading={"eager"}
               src={"/images/rufans.png"}
@@ -178,15 +177,11 @@ export default function Home() {
             </p>
 
             <div className="flex items-center gap-x-5 mx-auto lg:mx-0 max-w-xs text-start">
-              {/* <img
-                src="/images/rufans.png"
-                className="rounded-full h-12 w-12 lg:hidden "
-              /> */}
-
               <div className=" lg:hidden ">
                 <Image
                   width={48}
                   height={48}
+                  alt="solomon emetonjo"
                   loading={"eager"}
                   src={"/images/rufans.png"}
                   className="rounded-full "

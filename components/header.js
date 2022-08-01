@@ -9,6 +9,7 @@ function Header() {
 
           <Image
             width={44}
+            alt='solomon emetonjo'
             height={44}
             loading={"eager"}
             src={"/images/rufans.png"}
