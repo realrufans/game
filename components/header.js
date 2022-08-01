@@ -25,19 +25,19 @@ function Header() {
 
       <ul className=" border-t-[1px] border-[#4b597d] sm:border-none flex justify-between fixed bottom-0 w-full left-0 right-0 min-w-full  bg-[#101B2E] sm:static p-5 sm:min-w-0 sm:max-w-xs">
         <Link href={"https://realrufans.github.io/cv/"}>
-          <a>Resume</a>
+          <a className="hover:scale-[1.1] hover:ease-in-out">Resume</a>
         </Link>
 
         <Link href={"/#projects"}>
-          <a>Projects</a>
+          <a className="hover:scale-[1.1] hover:ease-in-out">Projects</a>
         </Link>
         <Link href={"/#about"}>
-          <a>About</a>
+          <a className="hover:scale-[1.1] hover:ease-in-out">About</a>
         </Link>
       </ul>
 
       <Link href={"/contact"}>
-        <p className=" cursor-pointer bg-[#546800] text-[#FBFBFB] text-lg p-2 w-fit font-bold rounded-xl">
+        <p className=" cursor-pointer bg-green-900 text-[#f4f4f4] text-lg p-2 w-fit font-semibold rounded-xl">
           Hire Me
         </p>
       </Link>

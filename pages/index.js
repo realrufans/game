@@ -57,7 +57,7 @@ export default function Home() {
                 <span className="text-[#dba713]"> Codes</span>.
               </p>
               <Link href={"/contact"}>
-                <p className=" cursor-pointer bg-[#546800] text-[#FBFBFB]   text-lg p-3 w-60 text-center mt-10 mx-auto lg:mx-0 font-bold rounded-xl">
+                <p className=" cursor-pointer  bg-green-900   text-[#f4f4f4]  text-lg p-3 w-60 text-center mt-10 mx-auto lg:mx-0 font-bold rounded-xl">
                   Hire Me
                 </p>
               </Link>
@@ -123,7 +123,7 @@ export default function Home() {
                   <div>
                     <a
                       href={project.url}
-                      className=" cursor-pointer bg-[#546800] text-[#FBFBFB]   text-lg p-3 w-fit lg:w-40 text-center  mx-auto lg:mx-0 font-bold rounded-xl"
+                      className=" cursor-pointer  bg-green-900   text-[#f4f4f4]    text-lg p-3 w-fit lg:w-40 text-center  mx-auto lg:mx-0 font-bold rounded-xl"
                     >
                       Live view
                     </a>
