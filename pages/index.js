@@ -20,7 +20,6 @@ export default function Home() {
     },
   };
 
-
   return (
     <>
       <div className="p-5 max-w-7xl mx-auto ">
@@ -153,8 +152,11 @@ export default function Home() {
         >
           <div className=" hidden lg:inline-flex lg:self-center ">
             <Image
-              width={160}
-              height={160}
+              width={150}
+              layout="fixed"
+              height={150}
+              objectFit='cover'
+              quality={100}
               loading={"eager"}
               src={"/images/rufans.png"}
               className="rounded-full "

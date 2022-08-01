@@ -15,6 +15,7 @@ function Header() {
             className="rounded-full"
           />
 
+
           <h1 className="hidden sm:inline-block font-bold font-inter text-base max-w-[100px] ">
             Solomon Emetonjo
           </h1>
