@@ -3,7 +3,7 @@ import emailkey from "../utils/emailkey";
 import { useState } from "react";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 
 function Contact() {
@@ -13,11 +13,9 @@ function Contact() {
     to_name: "Solomon Emtonjo",
     message: "",
   });
-  const router = useRouter();
+
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
-
-  console.log(emailkey);
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -51,7 +49,7 @@ function Contact() {
       <div div className="max-w-lg mx-auto">
         <div className="mt-16">
           <div className="space-y-5">
-            <h1 className="text-[#FBFBFB] text-5xl font-bold">
+            <h1 className=" title text-5xl font-bold">
               {!sent ? `Let's talk!` : "Thank you."}
             </h1>
             <p className="italic  text-lg">

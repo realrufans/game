@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="mb-12 mt-10 w-full space-y-10  p-10 border-t-[1px] border-[#4b597d]">
+    <footer className="mb-12 mt-10 w-full space-y-10   p-10 border-t-[1px] border-[#4b597d]">
       <div className="flex space-x-10 justify-center">
         {" "}
         <a
@@ -13,6 +13,7 @@ function Footer() {
             width="32"
             alt="github"
             height="32"
+            className=" bg-black rounded-full"
           />
         </a>{" "}
         <a
