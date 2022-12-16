@@ -38,7 +38,7 @@ function Myblog() {
       >
         My Hive Blog
       </h1>
-      <div class="  rounded overflow-hidden shadow-lg md:flex md:justify-between md:flex-wrap     ">
+      <div className="  rounded overflow-hidden shadow-lg md:flex md:justify-between md:flex-wrap     ">
         {posts?.map((post, i) => {
           const json = JSON.parse(post.json_metadata);
           const postMarkDown = post.body;
@@ -70,21 +70,24 @@ function Myblog() {
                   alt="Card image"
                 />
 
-                <div class="px-6 py-4">
-                  <h2 class="font-bold text-xl mb-2">{post.title}</h2>
-                  <p class=" text-sm">{postBody}</p>
+                <div className="px-6 py-4">
+                  <h2 className="font-bold text-xl mb-2">{post.title}</h2>
+                  <p className=" text-sm">{postBody}</p>
                 </div>
-                <div class="px-6   ">
-                  {json.tags.map((tag) => {
+                <div className="px-6   ">
+                  {json.tags.map((tag, i) => {
                     return (
-                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2">
+                      <span
+                        key={i}
+                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
+                      >
                         {tag}
                       </span>
                     );
                   })}
                 </div>
-                <div class="px-6 py-4">
-                  <span class="inline-block bg-gray-200  rounded-full px-3 py-1 text-xs font-semibold text-green-900 mr-2">
+                <div className="px-6 py-4">
+                  <span className="inline-block bg-gray-200  rounded-full px-3 py-1 text-xs font-semibold text-green-900 mr-2">
                     {postDate}
                   </span>
                 </div>
