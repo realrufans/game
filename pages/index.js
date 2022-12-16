@@ -27,6 +27,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import Myblog from "../components/myBlog";
 
 const CustomNavigation = (slot = { next: false, prev: false }) => {
   const swiper = useSwiper();
@@ -58,6 +59,8 @@ const CustomNavigation = (slot = { next: false, prev: false }) => {
 };
 
 export default function Home() {
+ 
+
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -71,7 +74,10 @@ export default function Home() {
   };
   useEffect(() => setMounted(true), []);
 
+
+
   if (!mounted) return null;
+
   return (
     <>
       <div className="p-2 max-w-7xl mx-auto ">
@@ -200,7 +206,8 @@ export default function Home() {
           </Swiper>
         </div>
 
-        {/* about me */}
+        {/* My hive blog */}
+        <Myblog />
 
         <div
           className=" flex mt-16 lg:mt-36 justify-between mx-auto max-w-lg   lg:max-w-4xl   w-full text-center lg:text-start  flex-col lg:flex-row "
@@ -210,6 +217,7 @@ export default function Home() {
             <Image
               width={150}
               layout="fixed"
+              
               alt="solomon emetonjo"
               height={150}
               objectFit="cover"

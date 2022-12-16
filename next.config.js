@@ -7,6 +7,9 @@ const nextConfig = {
     TEMPLATE_ID: process.env.TEMPLATE_ID, //templateID
     Public_ID: process.env.Public_ID,
   },
+  images: {
+    domains: ['images.hive.blog'],
+  },
   productionBrowserSourceMaps: false,
 };
 

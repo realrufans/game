@@ -11,12 +11,16 @@
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@heroicons/react": "^1.0.6",
+    "@hiveio/dhive": "^1.2.4",
     "emailjs-com": "^3.2.0",
+    "markdown-it": "^13.0.1",
     "next": "12.2.3",
     "next-themes": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-lottie": "^1.2.3",
+    "string-strip-html": "^13.0.2",
+    "strip-html": "^1.0.2",
     "swiper": "^8.3.2"
   },
   "devDependencies": {
