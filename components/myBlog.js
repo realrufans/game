@@ -10,7 +10,6 @@ function Myblog() {
   const [posts, setPosts] = useState([]);
 
   // connecting to hive blogchain
-  const blogBaseUrl = "https://hive.blog";
   const getUserPost = async () => {
     const post = [];
     const data = await client.database.getDiscussions("blog", {
@@ -50,6 +49,7 @@ function Myblog() {
           }
           return (
             <a
+              key={i}
               target="_blank"
               rel="noopener noreferrer"
               href={`https://hive.blog/${post.url.substring(5, [
@@ -57,10 +57,7 @@ function Myblog() {
               ])}`}
             >
               {" "}
-              <div
-                key={i}
-                className="border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20"
-              >
+              <div className="border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20">
                 <Image
                   objectFit="contain"
                   layout="responsive"
