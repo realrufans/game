@@ -207,7 +207,7 @@ export default function Home() {
         </div>
 
         {/* My hive blog */}
-        <Myblog />
+        {/* <Myblog /> */}
 
         <div
           className=" flex mt-16 lg:mt-36 justify-between mx-auto max-w-lg   lg:max-w-4xl   w-full text-center lg:text-start  flex-col lg:flex-row "

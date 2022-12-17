@@ -10,6 +10,7 @@ function Myblog() {
   const [posts, setPosts] = useState([]);
 
   // connecting to hive blogchain
+
   const getUserPost = async () => {
     const post = [];
     const data = await client.database.getDiscussions("blog", {
@@ -30,6 +31,7 @@ function Myblog() {
     a();
   }, []);
 
+  console.log(posts);
   return (
     <div className="mt-14  items-center  ">
       <h1
@@ -48,48 +50,49 @@ function Myblog() {
           {
           }
           return (
-            <a
-              key={i}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://hive.blog/${post.url.substring(5, [
-                post.url.length,
-              ])}`}
-            >
-              {" "}
-              <div className="border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20">
-                <Image
-                  objectFit="contain"
-                  layout="responsive"
-                  width={110}
-                  height={80}
-                  src={json.image[0]}
-                  alt="Card image"
-                />
+            <div key={i}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://hive.blog/${post.url.substring(5, [
+                  post.url.length,
+                ])}`}
+              >
+                {" "}
+                <div className="border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20">
+                  <Image
+                    objectFit="contain"
+                    layout="responsive"
+                    width={110}
+                    height={80}
+                    src={json.image[0]}
+                    alt="Card image"
+                  />
 
-                <div className="px-6 py-4">
-                  <h2 className="font-bold text-xl mb-2">{post.title}</h2>
-                  <p className=" text-sm">{postBody}</p>
+                  <div className="px-6 py-4">
+                    <h2 className="font-bold text-xl mb-2">{post.title}</h2>
+                    <p className=" text-sm">{postBody}</p>
+                  </div>
+                  <div className="px-6   ">
+                    {json.tags.map((tag, i) => {
+                      return (
+                        <span
+                          key={i}
+                          className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  <div className="px-6 py-4">
+                    <span className="inline-block bg-gray-200  rounded-full px-3 py-1 text-xs font-semibold text-green-900 mr-2">
+                      {postDate}
+                    </span>
+                  </div>
                 </div>
-                <div className="px-6   ">
-                  {json.tags.map((tag, i) => {
-                    return (
-                      <span
-                        key={i}
-                        className="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
-                      >
-                        {tag}
-                      </span>
-                    );
-                  })}
-                </div>
-                <div className="px-6 py-4">
-                  <span className="inline-block bg-gray-200  rounded-full px-3 py-1 text-xs font-semibold text-green-900 mr-2">
-                    {postDate}
-                  </span>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           );
         })}
       </div>
