@@ -2,26 +2,30 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 const markdown = require("markdown-it")();
 import { stripHtml } from "string-strip-html";
-import Link from "next/link";
+var hivejs = require('@hivechain/hivejs');
+
 
 function Myblog() {
-  const { Client } = require("@hiveio/dhive");
-  const client = new Client("https://api.hive.blog");
+
   const [posts, setPosts] = useState([]);
 
   // connecting to hive blogchain
 
   const getUserPost = async () => {
     const post = [];
-    const data = await client.database.getDiscussions("blog", {
-      tag: "rufans",
-      limit: 3,
+
+    hivejs.api.getDiscussionsByBlog({ tag: 'rufans', limit: 3 }, (err, data) => {
+      data.map((postDetails) => {
+
+        post.push(postDetails);
+        setPosts(post);
+      });
+
     });
-    data.map((postDetails) => {
-      //   setPosts(postDetails);
-      post.push(postDetails);
-      setPosts(post);
-    });
+
+
+
+
   };
 
   useEffect(() => {
@@ -44,7 +48,7 @@ function Myblog() {
           const json = JSON.parse(post.json_metadata);
           const postMarkDown = post.body;
           const htmlbody = markdown.render(postMarkDown);
-          const postBody = stripHtml(htmlbody.substring(0, 200)).result;
+          const postBody = stripHtml(htmlbody.substring(0, 150)).result;
           const postDate = new Date(post.created).toDateString();
 
           {
@@ -59,18 +63,20 @@ function Myblog() {
                 ])}`}
               >
                 {" "}
-                <div className="border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20">
+                <div className="hover:scale-110 hover:bg-black-900   border-b-2 border-black/10 my-10  max-w-sm  cursor-pointer  shadow-black/20 shadow-xl mx-auto mt-0 bg-red-50/20">
                   <Image
-                    objectFit="contain"
+                    objectFit="cover"
                     layout="responsive"
-                    width={110}
-                    height={80}
+                    width={150}
+                    height={100}
                     src={json.image[0]}
-                    alt="Card image"
+                    alt="rufans on hive"
+
+                  
                   />
 
                   <div className="px-6 py-4">
-                    <h2 className="font-bold text-xl mb-2">{post.title}</h2>
+                    <h2 className="font-extrabold text-white-900 mb-2">{post.title.substring(0, 150)}</h2>
                     <p className=" text-sm">{postBody}</p>
                   </div>
                   <div className="px-6   ">
@@ -92,7 +98,7 @@ function Myblog() {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> 
           );
         })}
       </div>
