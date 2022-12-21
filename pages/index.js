@@ -1,14 +1,12 @@
 import Head from "next/head";
 import {
-  ArrowLeftIcon,
-  BeakerIcon,
+ 
   ChevronLeftIcon,
   ChevronRightIcon,
-  LinkIcon,
-  MenuAlt1Icon,
+ 
 } from "@heroicons/react/solid";
 import workspace from "../loottie/workspace";
-import paperplane from "../loottie/paperplane.json";
+ 
 import Lottie from "react-lottie";
 import { useEffect, useState } from "react";
 import { projects } from "../utils/projectsData";
@@ -17,7 +15,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import React, { useRef } from "react";
+import React     from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 // Import Swiper styles
