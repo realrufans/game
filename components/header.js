@@ -23,7 +23,7 @@ function Header() {
     );
   };
   return (
-    <header className="flex justify-between z-50   items-center p-2 themeColors sticky top-0">
+    <header className="flex justify-between z-50   max-w-7xl mx-auto items-center p-2 themeColors sticky top-0">
       <Link href={"/"}>
         <div className=" flex space-x-3 items-center cursor-pointer">
           {/* <MenuAlt1Icon className="h-9 sm:hidden" /> */}
@@ -43,16 +43,19 @@ function Header() {
         </div>
       </Link>
 
-      <ul className=" border-t-[1px] border-[#4b597d] sm:border-none flex justify-between fixed bottom-0 w-full left-0 right-0 min-w-full  themeColors sm:static p-5 sm:min-w-0 sm:max-w-xs">
-        <Link href={"https://realrufans.github.io/cv/"}>
-          <a className="hover:scale-[1.1] hover:ease-in-out">Resume</a>
-        </Link>
+      <ul className=" border-t-[1px] border-[#4b597d] sm:border-none flex justify-between fixed bottom-0 w-full left-0 right-0 min-w-full  themeColors md:static p-5 md:min-w-0 sm:max-w-md">
+
+        <a href={"https://realrufans.github.io/cv/"} className="hover:scale-[1.1] hover:ease-in-out hover:shadow-green-900/50 hover:shadow-inner p-1">Resume</a>
+
 
         <Link href={"/#projects"}>
-          <a className="hover:scale-[1.1] hover:ease-in-out">Showcase</a>
+          <a className="hover:scale-[1.1] hover:ease-in-out hover:shadow-green-900/50 hover:shadow-inner p-1">Showcase</a>
+        </Link>
+        <Link href={"/blog"}>
+          <a className="hover:scale-[1.1] hover:ease-in-out hover:shadow-green-900/50 hover:shadow-inner p-1">Blog</a>
         </Link>
         <Link href={"/#about"}>
-          <a className="hover:scale-[1.1] hover:ease-in-out">About</a>
+          <a className="hover:scale-[1.1] hover:ease-in-out  hover:shadow-green-900/50 hover:shadow-inner p-1">About</a>
         </Link>
       </ul>
 

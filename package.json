@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@heroicons/react": "^1.0.6",
     "@hivechain/hivejs": "^1.0.4",
     "@hiveio/dhive": "^1.2.4",
+    "dhive-sl": "^2.0.0-prerelease.9",
     "emailjs-com": "^3.2.0",
     "markdown-it": "^13.0.1",
     "next": "12.2.3",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
+    "cypress": "^12.3.0",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
     "postcss": "^8.4.14",
