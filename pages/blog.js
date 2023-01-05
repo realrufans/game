@@ -39,7 +39,7 @@ function blog({ posts }) {
             <Header />
 
 
-            <div className=" items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
+            <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
 
 
                 <Head>
@@ -80,23 +80,25 @@ function blog({ posts }) {
                         return (
 
 
-                            <div key={i} className=" md:border-none border-b-[0.1px] p-5  gap-5 items-center  w-full space-y-2 md:flex justify-start ">
-                                <div className="hidden md:inline-block" >
-                                    <Image
-                                        className="rounded-2xl  "
-                                        objectFit="contain"
-                                        layout="fixed"
-                                        src={json.image[0]} height={150} width={150} alt={post.title} />
-                                </div>
+                            <a href={`https://hive.blog/${post.url.substring(5, [
+                                post.url.length,
+                            ])}`} key={i}>
+                                <div className=" md:border-none border-b-[0.1px] p-5  gap-5 items-center  w-full space-y-2 md:flex justify-start ">
+                                    <div className="hidden md:inline-block" >
+                                        <Image
+                                            className="rounded-2xl  "
+                                            objectFit="contain"
+                                            layout="fixed"
+                                            src={json.image[0]} height={150} width={150} alt={post.title} />
+                                    </div>
 
-                                <div>
-                                    <a href={`https://hive.blog/${post.url.substring(5, [
-                                        post.url.length,
-                                    ])}`}>                            <h1 className=" mb-0  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">{post.title}</h1>
-                                    </a>
-                                    <h3 className="m-1  text-xs">{postDate}</h3>
-                                    <p className="text-base">{postBody}...</p></div>
-                            </div>
+                                    <div>
+                                        <div >                            <h1 className=" mb-0  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">{post.title}</h1>
+                                        </div>
+                                        <h3 className="m-1  text-xs">{postDate}</h3>
+                                        <p className="text-base">{postBody}...</p></div>
+                                </div>
+                            </a>
 
                         )
 
