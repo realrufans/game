@@ -45,7 +45,7 @@ function Header() {
 
       <ul className=" border-t-[1px] border-[#4b597d] sm:border-none flex justify-between fixed bottom-0 w-full left-0 right-0 min-w-full  themeColors md:static p-5 md:min-w-0 sm:max-w-md">
 
-        <a href={"https://realrufans.github.io/cv/"} className="hover:scale-[1.1] hover:ease-in-out hover:shadow-green-900/50 hover:shadow-inner p-1">Resume</a>
+        <a href={" /solomon_Emeonjo__Resume.pdf"} className="hover:scale-[1.1] hover:ease-in-out hover:shadow-green-900/50 hover:shadow-inner p-1">Resume</a>
 
 
         <Link href={"/#projects"}>
