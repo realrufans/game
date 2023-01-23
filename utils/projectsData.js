@@ -1,6 +1,15 @@
 export const projects = [
   {
     id: 0,
+    name: "Coinsino Finance",
+    thumbnail: "/images/coinsino.png",
+    alt: "coinsino",
+    description: `Coinsino Finance is a cutting-edge betting platform that utilizes web3 technology to offer advanced betting games. Users can join various betting pools to predict the outcome of different events. The platform also aims to support play-to-earn games through its Odd pool resources, making it a multi-level gaming and betting portal for both entertainment and profitability.`,
+    tags: "#nextjs #etherjs #tailwindcss",
+    url: "http://lottery.coinsino.finance/",
+  },
+  {
+    id: 0,
     name: "Telostask Landing-page",
     thumbnail: "/images/telostask.png",
     alt: "telostask by rufans",
@@ -38,3 +47,4 @@ export const projects = [
     url: "https://realrufans.github.io/pacman/",
   },
 ];
+
