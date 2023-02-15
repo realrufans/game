@@ -122,7 +122,10 @@ export default function Home() {
 
           {projects.map((project) => {
             return (
-              <div className="flex flex-col sm:flex-row  mx-auto w-full justify-between items-center p-2 border-t-[1px] border-[#4b597d] ">
+              <div
+                key={project.id}
+                className="flex flex-col sm:flex-row  mx-auto w-full justify-between items-center p-2 border-t-[1px] border-[#4b597d] "
+              >
                 <div className=" sm:max-w-xs md:max-w-md lg:max-w-lg   ">
                   <h2 className=" text-lg lg:2xl: font-bold text-white/90">
                     {project.name}
