@@ -19,4 +19,12 @@
   .title {
     @apply text-[#242329]  dark:text-[#b4bcd1];
   }
+
+  .theme-btn{
+    @apply h-9 cursor-pointer animate-pulse
+  }
+
+  .nav-btn{
+    @apply hover:scale-[1.1] hover:ease-in-out  p-1
+  }
 }

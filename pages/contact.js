@@ -44,9 +44,9 @@ function Contact() {
     (toSend.user_email.trim("").length < 1);
 
   return (
-    <div className="p-5 max-w-7xl mx-auto ">
+    <div className=" max-w-7xl mx-auto ">
       <Header />
-      <div div className="max-w-lg mx-auto">
+      <div div className="p-5 max-w-lg mx-auto">
         <div className="mt-16">
           <div className="space-y-5">
             <h1 className=" title text-5xl font-bold">
@@ -115,9 +115,10 @@ function Contact() {
               </label>
               {!sending ? (
                 <input
+                
                   disabled={disable}
-                  className={`cursor-pointer  bg-green-900   text-[#f4f4f4] text-lg p-3 w-full  font-bold rounded-xl ${
-                    disable && "bg-gray-600"
+                  className={`cursor-pointer hover:bg-green-700  bg-green-900   text-[#f4f4f4] text-lg p-3 w-full  font-bold rounded-xl ${
+                    disable && "bg-gray-600 hover:bg-gray-600"
                   }`}
                   type="submit"
                   value="Send"
