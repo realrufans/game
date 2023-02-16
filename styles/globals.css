@@ -20,11 +20,17 @@
     @apply text-[#242329]  dark:text-[#b4bcd1];
   }
 
-  .theme-btn{
-    @apply h-9 cursor-pointer animate-pulse
+  .theme-btn {
+    @apply h-9 cursor-pointer animate-pulse ; 
   }
 
-  .nav-btn{
-    @apply hover:scale-[1.1] hover:ease-in-out  p-1
+  .nav-btn {
+    @apply hover:scale-[1.1] hover:ease-in-out hover:text-black dark:hover:text-white hover:font-bold  p-1;
   }
+}
+
+ 
+.carouselBtn {
+  background-color: rgb(21 128 61);
+  border-radius: 9999px;
 }

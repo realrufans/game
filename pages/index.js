@@ -20,35 +20,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-
-const CustomNavigation = (slot = { next: false, prev: false }) => {
-  const swiper = useSwiper();
-  const [slideProgress, setSlideProgress] = useState(0);
-  swiper.on("slideChange", (e) => {
-    setSlideProgress(e.progress);
-  });
-
-  return (
-    <div>
-      {slot.prev && (
-        <button
-          onClick={() => swiper.slidePrev()}
-          disabled={slideProgress === 0}
-        >
-          <ChevronLeftIcon className="h-7 text-[#e6e6e6] bg-green-900" />
-        </button>
-      )}
-      {slot.next && (
-        <button
-          onClick={() => swiper.slideNext()}
-          disabled={slideProgress === 1}
-        >
-          <ChevronRightIcon className="h-7 text-[#e6e6e6]  bg-green-900" />
-        </button>
-      )}
-    </div>
-  );
-};
+import { Carousel } from "flowbite-react";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -62,7 +34,19 @@ export default function Home() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    if (mounted) {
+      document
+        .getElementById("carousel")
+        .children[3].firstChild.classList.add("carouselBtn");
+      document
+        .getElementById("carousel")
+        .children[2].lastChild.classList.add("carouselBtn");
+    }
+
+    return () => setMounted(false);
+  }, [mounted]);
 
   if (!mounted) return null;
 
@@ -120,44 +104,60 @@ export default function Home() {
             Showcase
           </h2>
 
-          {projects.map((project) => {
-            return (
-              <div
-                key={project.id}
-                className="flex flex-col sm:flex-row  mx-auto w-full justify-between items-center p-2 border-t-[1px] border-[#4b597d] "
-              >
-                <div className=" sm:max-w-xs md:max-w-md lg:max-w-lg   ">
-                  <h2 className=" text-lg lg:2xl: font-bold text-white/90">
-                    {project.name}
-                  </h2>
-                  <p className="leading-6  text-lg ">{project.description}</p>
-                  <p className=" italic text-sm mt-2   "> {project.tags}</p>
-                  <div className="mt-5">
-                    <a
-                      href={project.url}
-                      className=" cursor-pointer hover:bg-green-700  bg-green-900   text-[#f4f4f4]    text-sm lg:text-lg p-3 w-fit lg:w-40 text-center  mx-auto lg:mx-0 font-medium rounded-xl"
-                    >
-                      Live view
-                    </a>
-                  </div>
-                </div>
+          <div className="h-[450px] sm:h-64 xl:h-80 2xl:h-96  ">
+            <Carousel slideInterval={5000} id="carousel">
+              {projects.map((project) => {
+                return (
+                  <div
+                    key={project.id}
+                    className="flex flex-col sm:flex-row  mx-auto w-full justify-between items-center p-2   "
+                  >
+                    <div className=" sm:max-w-xs md:max-w-md lg:max-w-lg  p-16 ">
+                      <div
+                        className={`sm:hidden relative m-5 h-52 w-80 mx-auto`}
+                      >
+                        <Image
+                          alt={project.alt}
+                          layout="fill"
+                          loading={"eager"}
+                          src={project.thumbnail}
+                          className="hover:scale-105   "
+                        />
+                      </div>
+                      <h2 className=" text-lg lg:2xl: font-bold">
+                        {project.name}
+                      </h2>
+                      <p className="leading-6  text-base line-clamp-3 sm:line-clamp-6 ">
+                        {project.description}
+                      </p>
+                      <p className=" italic text-sm mt-2   "> {project.tags}</p>
+                      <div className="mt-5">
+                        <a
+                          href={project.url}
+                          className=" cursor-pointer hover:bg-green-700  bg-green-900   text-[#f4f4f4]    text-sm lg:text-lg p-3 w-fit lg:w-40 text-center  mx-auto lg:mx-0 font-medium rounded-xl"
+                        >
+                          Live view
+                        </a>
+                      </div>
+                    </div>
 
-                <div
-                  className={`${
-                    project.id % 2 == 0 && "sm:order-first"
-                  }  relative m-10 h-64 w-96 sm:h-52 sm:w-64  lg:h-64 lg:w-96`}
-                >
-                  <Image
-                    alt={project.alt}
-                    layout="fill"
-                    loading={"eager"}
-                    src={project.thumbnail}
-                    className="hover:scale-105"
-                  />
-                </div>
-              </div>
-            );
-          })}
+                    <div
+                      className={`hidden sm:inline-flex   relative m-10 sm:mr-16    sm:h-52 sm:w-64  lg:h-64 lg:w-96`}
+                    >
+                      <Image
+                        alt={project.alt}
+                        layout="fill"
+                        loading={"eager"}
+                        objectFit="cover"
+                        src={project.thumbnail}
+                        className="hover:scale-105  border-2 "
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </Carousel>
+          </div>
         </div>
 
         <div

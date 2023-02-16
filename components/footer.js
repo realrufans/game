@@ -43,7 +43,9 @@ function Footer() {
       </div>
 
       <p className="text-base mt-2 text-center">
-        Copyright © 2022 | All rights reserved
+        {`Copyright © ${new Date(
+          Date.now()
+        ).getFullYear()} | All rights reserved`}
       </p>
     </footer>
   );
