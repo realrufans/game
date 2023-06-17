@@ -4,7 +4,7 @@ Front-End developer. I worked with HTML, CSS, JavaScript, react, tailwindcss, an
 
 - 🌍 I'm based in Lagos, Nigeria
 - [My portfolio](https://realrufans.vercel.app/)
-- ✉️ You can contact me at [solomonstephen27@ymail.com](mailto:solomonstephen27@ymail.com)
+- ✉️ You can contact me at [solomonemetonjo@gmail.com](mailto:solomonemetonjo@gmail.com)
 - 🧠 I'm learning Web3
 - 🤝 I'm open to collaborating on Front-end projects
 
