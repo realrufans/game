@@ -1,10 +1,10 @@
 # Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Solomon Emetonjo
 
-Front-End developer, I've been learning to code for 2 years. I worked with HTML, CSS, JavaScript, react, tailwindcss, and firebase for storing Data.
+Front-End developer. I worked with HTML, CSS, JavaScript, react, tailwindcss, and firebase for storing Data.
 
 - 🌍 I'm based in Lagos, Nigeria
 - [My portfolio](https://realrufans.vercel.app/)
-- ✉️ You can contact me at [solomonstephen27@ymail.com](mailto:solomonstephen27@ymail.com)
+- ✉️ You can contact me at [solomonemetonjo@gmail.com](mailto:solomonemetonjo@gmail.com)
 - 🧠 I'm learning Web3
 - 🤝 I'm open to collaborating on Front-end projects
 
