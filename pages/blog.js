@@ -75,25 +75,27 @@ function blog({ posts }) {
                         const postBody = stripHtml(htmlbody.substring(0, 200)).result;
                         const postDate = new Date(post.created).toDateString();
 
+                        console.log(post)
+
 
 
                         return (
 
 
-                            <a href={`https://hive.blog/${post.url.substring(5, [
+                            <a href={`https://hive.blog/${post.url.substring(1, [
                                 post.url.length,
                             ])}`} key={i}>
                                 <div className=" md:border-none border-b-[0.1px] p-5  gap-5 items-center  w-full space-y-2 md:flex justify-start ">
                                     <div className="hidden md:inline-block" >
-                                        <Image
+                                        {/* <Image
                                             className="rounded-2xl  "
                                             objectFit="contain"
                                             layout="fixed"
-                                            src={json.image[0]} height={150} width={150} alt={post.title} />
+                                            src={json.image[0]} height={150} width={150} alt={post.title} /> */}
                                     </div>
 
                                     <div>
-                                        <div >                            <h1 className=" mb-0  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">{post.title}</h1>
+                                        <div >                            <h1 className=" mb-0  capitalize  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">{post.title}</h1>
                                         </div>
                                         <h3 className="m-1  text-xs">{postDate}</h3>
                                         <p className="text-base">{postBody}...</p></div>
