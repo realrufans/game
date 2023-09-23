@@ -5,27 +5,27 @@ import { stripHtml } from "string-strip-html";
 import Header from "../components/header";
 import { Client } from "dhive-sl";
 
-export async function getStaticProps() {
-  const client = new Client();
-  // Fetch data from external API
-  const posts = await client.database.getDiscussions("blog", {
-    tag: "rufans",
-    limit: 10,
-  });
-  // Pass data to the component props
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const client = new Client();
+//   // Fetch data from external API
+//   const posts = await client.database.getDiscussions("blog", {
+//     tag: "rufans",
+//     limit: 10,
+//   });
+//   // Pass data to the component props
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
 
 function Blog({ posts }) {
   return (
     <>
       <Header />
 
-      <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
+      {/* <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
         <Head>
           <title>Blog</title>
           <meta name="description" content="Hive post" />
@@ -89,7 +89,7 @@ function Blog({ posts }) {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
