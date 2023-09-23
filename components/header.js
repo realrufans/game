@@ -50,14 +50,14 @@ function Header() {
           Resume
         </a>
 
-        <Link href={"/#projects"}>
-          <a className="nav-btn">Showcase</a>
+        <Link  href={"/#projects"}>
+        <span className="nav-btn">Showcase</span>
         </Link>
-        <Link href={"/blog"}>
-          <a className="nav-btn">Blog</a>
+        <Link  href={"/blog"}>
+          <span className="nav-btn">Blog</span>
         </Link>
-        <Link href={"/#about"}>
-          <a className="nav-btn">About</a>
+        <Link className="nav-btn" href={"/#about"}>
+        <span className="nav-btn">About</span>
         </Link>
       </ul>
 
