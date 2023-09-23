@@ -4,14 +4,11 @@ const markdown = require("markdown-it")();
 import { stripHtml } from "string-strip-html";
 import Header from "../components/header";
 import { Client } from "dhive-sl";
+import { useEffect, useState } from "react";
 
 // export async function getStaticProps() {
 //   const client = new Client();
-//   // Fetch data from external API
-//   const posts = await client.database.getDiscussions("blog", {
-//     tag: "rufans",
-//     limit: 10,
-//   });
+
 //   // Pass data to the component props
 //   return {
 //     props: {
@@ -20,12 +17,28 @@ import { Client } from "dhive-sl";
 //   };
 // }
 
-function Blog({ posts }) {
+function Blog() {
+  const [posts, setPost] = useState([]);
+
+  const fetchBlogPost = async () => {
+    const client = new Client();  
+    // Fetch data from external API
+    const posts = await client.database.getDiscussions("blog", {
+      tag: "rufans",
+      limit: 10,
+    });
+    setPost(posts);
+  };
+
+  useEffect(() => {
+    // Fetch data from external API
+    fetchBlogPost();
+  }, []);
   return (
     <>
       <Header />
 
-      {/* <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
+      <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
         <Head>
           <title>Blog</title>
           <meta name="description" content="Hive post" />
@@ -37,7 +50,8 @@ function Blog({ posts }) {
         </h1>
 
         <div className="  w-full     ">
-          {posts.length < 1 && (
+          {posts.length === 0 ? (
+            // Show skeleton or loading animation when posts are not available
             <div className=" flex mt-40 md:mt-56 justify-center text-green-800">
               <svg width="40" height="40" viewBox="0 0 50 50">
                 <path
@@ -56,40 +70,42 @@ function Blog({ posts }) {
                 </path>
               </svg>
             </div>
-          )}
-          {posts?.map((post, i) => {
-            const json = JSON.parse(post.json_metadata);
-            const postMarkDown = post.body;
-            const htmlbody = markdown.render(postMarkDown);
-            const postBody = stripHtml(htmlbody.substring(0, 200)).result;
-            const postDate = new Date(post.created).toDateString();
+          ) : (
+            // Render posts when available
+            posts.map((post, i) => {
+              const json = JSON.parse(post.json_metadata);
+              const postMarkDown = post.body;
+              const htmlbody = markdown.render(postMarkDown);
+              const postBody = stripHtml(htmlbody.substring(0, 200)).result;
+              const postDate = new Date(post.created).toDateString();
 
-            return (
-              <a
-                href={`https://hive.blog/${post.url.substring(1, [
-                  post.url.length,
-                ])}`}
-                key={i}
-              >
-                <div className="  border-b-[0.1px]  border-transparent/10 dark:border-gray-100/20 p-5  gap-5 items-center  w-full space-y-2 md:flex justify-start ">
-                  <div className="hidden md:inline-block"></div>
+              return (
+                <a
+                  href={`https://hive.blog/${post.url.substring(1, [
+                    post.url.length,
+                  ])}`}
+                  key={i}
+                >
+                  <div className="  border-b-[0.1px]  border-transparent/10 dark:border-gray-100/20 p-5  gap-5 items-center  w-full space-y-2 md:flex justify-start ">
+                    <div className="hidden md:inline-block"></div>
 
-                  <div>
                     <div>
-                      {" "}
-                      <h1 className=" mb-0  capitalize  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">
-                        {post.title}
-                      </h1>
+                      <div>
+                        {" "}
+                        <h1 className=" mb-0  capitalize  rounded-lg    font-bold leading-relaxed text-lg hover:bg-blue-900/40 p-2 hover:bg-bottom hover:cursor-pointer ">
+                          {post.title}
+                        </h1>
+                      </div>
+                      <h3 className="m-1  text-xs">{postDate}</h3>
+                      <p className="text-base">{postBody}...</p>
                     </div>
-                    <h3 className="m-1  text-xs">{postDate}</h3>
-                    <p className="text-base">{postBody}...</p>
                   </div>
-                </div>
-              </a>
-            );
-          })}
+                </a>
+              );
+            })
+          )}
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
