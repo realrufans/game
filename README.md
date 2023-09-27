@@ -3,7 +3,7 @@
 Front-End developer. I worked with HTML, CSS, JavaScript, react, tailwindcss, and firebase for storing Data.
 
 - 🌍 I'm based in Lagos, Nigeria
-- [My portfolio](https:metonj.dev/)
+- [My portfolio](https://metonj.dev/)
 - ✉️ You can contact me at [solomonemetonjo@gmail.com](mailto:solomonemetonjo@gmail.com)
 - 🧠 I'm learning Web3
 - 🤝 I'm open to collaborating on Front-end projects
