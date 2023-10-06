@@ -46,7 +46,7 @@ function Contact() {
   return (
     <div className=" max-w-7xl mx-auto ">
       <Header />
-      <div div className="p-5 max-w-lg mx-auto">
+      <div className="p-5 max-w-lg mx-auto">
         <div className="mt-16">
           <div className="space-y-5">
             <h1 className=" title text-5xl font-bold">
