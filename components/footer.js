@@ -17,7 +17,7 @@ function Footer() {
           />
         </a>{" "}
         <a
-          href="https://www.linkedin.com/in/realrufans/"
+          href="https://www.linkedin.com/in/solomon-emetonjo"
           target="_blank"
           rel="noreferrer"
         >
