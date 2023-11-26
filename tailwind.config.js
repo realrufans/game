@@ -13,11 +13,14 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+        mono: ["IBM Plex Mono", "monospace"],
+        sans: ["Montserrat", "sans-serif"],
+        serif: ["Roboto", "serif"],
       },
       animation: {
         "bounce-slow": "bounce 3s linear infinite",
       },
     },
   },
-  plugins: [require("flowbite/plugin"), require('@tailwindcss/line-clamp')] ,
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/line-clamp")],
 };
