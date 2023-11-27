@@ -45,7 +45,7 @@ function Contact() {
 
   return (
     <div className=" max-w-7xl mx-auto ">
-      <Header />
+      
       <div className="p-5 max-w-lg mx-auto">
         <div className="mt-16">
           <div className="space-y-5">
@@ -70,7 +70,7 @@ function Contact() {
             </p>
             {sent && (
               <Link href={"/"}>
-                <p className=" cursor-pointer bg-green-900 w-fit  text-[#f4f4f4] rounded-xl font-bold p-5">
+                <p className="hireMeBtn  cursor-pointer bg-green-900 w-fit  text-[#f4f4f4] rounded-xl font-bold p-5">
                   Back to Home
                 </p>
               </Link>
@@ -117,7 +117,7 @@ function Contact() {
                 <input
                 
                   disabled={disable}
-                  className={`cursor-pointer hover:bg-green-700  bg-green-900   text-[#f4f4f4] text-lg p-3 w-full  font-bold rounded-xl ${
+                  className={`cursor-pointer hireMeBtn  hover:bg-green-700  bg-green-900   text-[#f4f4f4] text-lg p-3 w-full  font-bold rounded-xl ${
                     disable && "bg-gray-600 hover:bg-gray-600"
                   }`}
                   type="submit"
@@ -152,7 +152,7 @@ function Contact() {
           )}
         </div>
       </div>
-      <Footer />
+   
     </div>
   );
 }

@@ -42,7 +42,7 @@ function Footer() {
         </a>
       </div>
 
-      <p className="text-base mt-2 text-center">
+      <p className="text-base mt-2 text-center font-serif">
         {`Copyright © ${new Date(
           Date.now()
         ).getFullYear()} | All rights reserved`}

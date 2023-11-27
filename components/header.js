@@ -25,7 +25,7 @@ function Header() {
     );
   };
   return (
-    <header className="flex justify-between z-50    max-w-7xl mx-auto items-center p-2 themeColors sticky top-0">
+    <header className="flex justify-between z-50  shadow-gray-200/90  dark:shadow-gray-900/90 shadow-md   mx-auto items-center p-2 themeColors sticky -top-1">
       <Link href={"/"}>
         <div className=" flex space-x-3 items-center cursor-pointer">
           {/* <MenuAlt1Icon className="h-9 sm:hidden" /> */}
@@ -39,8 +39,8 @@ function Header() {
             className="rounded-full"
           />
 
-          <h1 className="hidden sm:inline-block font-bold  font-mono text-lg max-w-[100px] ">
-            Solomon Emetonjo
+          <h1 className="hidden sm:inline-flex font-bold  hover:text-green-600 dark:text-gray-200   text-gray-800  font-mono text-lg max-w-[100px] ">
+            Solomon.E
           </h1>
         </div>
       </Link>
@@ -50,7 +50,7 @@ function Header() {
           <div className="relative group flex ">
             {" "}
             <span className="nav-btn"> Resume</span>
-            <span className="absolute border-b-2 w-1/2 transform group-hover:translate-x-full duration-500 opacity-0 group-hover:opacity-100 border-green-500  inset-0 bottom-1 "></span>
+            <span className="navHover "></span>
           </div>
         </Link>
 
@@ -58,7 +58,7 @@ function Header() {
           <div className="relative group flex ">
             {" "}
             <span className="nav-btn">Showcase</span>
-            <span className="absolute border-b-2 w-1/2 transform group-hover:translate-x-full duration-500 opacity-0 group-hover:opacity-100 border-green-500  inset-0 bottom-1 "></span>
+            <span className="navHover "></span>
           </div>
         </Link>
 
@@ -66,7 +66,7 @@ function Header() {
           <div className="relative group flex ">
             {" "}
             <span className="nav-btn">Blog</span>
-            <span className="absolute border-b-2 w-1/2 transform group-hover:translate-x-full duration-500 opacity-0 group-hover:opacity-100 border-green-500  inset-0 bottom-1 "></span>
+            <span className="navHover "></span>
           </div>
         </Link>
 
@@ -74,7 +74,7 @@ function Header() {
           <div className="relative group flex ">
             {" "}
             <span className="nav-btn">About</span>
-            <span className="absolute border-b-2 w-1/2 transform group-hover:translate-x-full duration-500 opacity-0 group-hover:opacity-100 border-green-500  inset-0 bottom-1 "></span>
+            <span className="navHover "></span>
           </div>
         </Link>
       </ul>
@@ -82,10 +82,7 @@ function Header() {
       <div className="flex space-x-5 items-center">
         {" "}
         <Link href={"/contact"}>
-          <p
-            tabIndex={0}
-            className=" cursor-pointer  bg-gradient-to-r   from-green-600 dark:from-green-700 to-green-500  hover:to-green-500 hover:from-green-500  dark:hover:to-green-700 text-[#f4f4f4] text-lg py-2 px-5 w-fit font-semibold  rounded-lg"
-          >
+          <p tabIndex={0} className="hireMeBtn ">
             Hire Me
           </p>
         </Link>

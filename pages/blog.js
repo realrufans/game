@@ -36,7 +36,7 @@ function Blog() {
   }, []);
   return (
     <>
-      <Header />
+      
 
       <div className=" mb-20 items-center mt-16 md:mt-20 max-w-5xl mx-auto w-full ">
         <Head>
