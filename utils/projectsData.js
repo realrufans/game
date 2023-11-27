@@ -1,4 +1,13 @@
 export const projects = [
+   {
+    image: "/images/pdfcounter.png",
+    name: "PDF Keyword Counter",
+    description:
+      "Determine the number of times your keywords appear in a PDF document. Upload your PDF, enter keywords, and get keyword count results.",
+    tags: "#nodejs #nextj #javascript",
+    url: "https://pdf-keyword-counter-fontend.vercel.app",
+  },
+  
   {
     name: "Coinsino Finance",
     image: "/images/coinsino.png",

@@ -15,8 +15,8 @@ function ShowCaseCard({ image, name, details, tags, link }) {
         />
       </div>
       <div>
-        <h1 className="text-xl font-semibold mb-2">{name}</h1>
-        <p className="text-gray-600 line-clamp-3">{details}</p>
+        <h1 className="text-xl  font-semibold mb-2">{name}</h1>
+        <p className="text-gray-600 dark:text-gray-400  line-clamp-3 font-serif ">{details}</p>
       </div>
       <div className="flex items-center justify-between mt-4">
         <div className="flex space-x-2 flex-wrap ">
