@@ -27,13 +27,10 @@ function About() {
           >
             About Me
           </h1>
-          <p className=" font-serif text-lg">
-            I specialize in front-end web development using Reactjs and am
-            experienced in creating dynamic, user-friendly websites. I am
-            proficient in using Tailwindcss to enhance the visual appeal of my
-            projects. My goal is to build engaging and intuitive interfaces that
-            provide a positive experience for users.
-          </p>
+      <p className="font-serif text-lg">
+  I specialize in front-end web development using React.js, Next.js, and Tailwind CSS to create dynamic, user-friendly websites. My goal is to build engaging and intuitive interfaces that provide a positive experience for users.
+</p>
+
           <p className="font-serif  text-lg">
             I&#39;m now embarking on a Blockchain development journey while
             working with Nextjs to communicate with smart contracts.
