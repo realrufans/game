@@ -1,44 +1,11 @@
 export const projects = [
-  // {
-  //   name: "eCrea8",
-  //   image: "/images/e-creat8.png",
-  //   description:
-  //     "We transform your ideas into alluring digital realities and unleash boundless innovation. With a wide range of services, ranging from cybersecurity, UI/UX design, Front-end and Backend development, Project and Product management, we have all your digital aspirations covered.",
-  //   tags: "#tailwindcss #nextjs",
-  //   url: "https://ecrea8-website.vercel.app/",
-  // },
   {
-    image: "/images/pdfcounter.png",
-    name: "PDF Keyword Counter",
+    name: "RESTful API for Druminant",
+    image: "/images/druminant.png",
     description:
-      "Determine the number of times your keywords appear in a PDF document. Upload your PDF, enter keywords, and get keyword count results.",
-    tags: "#nodejs #nextjs #javascript",
-    url: "https://pdf-keyword-counter-fontend.vercel.app",
-  },
-
-  {
-    name: "Coinsino Finance",
-    image: "/images/coinsino.png",
-    description: `Coinsino Finance is a cutting-edge betting platform that utilizes web3 technology to offer advanced betting games. Users can join various betting pools to predict the outcome of different events. The platform also aims to support play-to-earn games through its Odd pool resources, making it a multi-level gaming and betting portal for both entertainment and profitability.`,
-    tags: "#nextjs #etherjs #tailwindcss",
-    url: "https://coinsinoweb3.vercel.app/",
-  },
-  // {
-  //   id: 0,
-  //   name: "Telostask Landing-page",
-  //   thumbnail: "/images/telostask.png",
-  //   alt: "telostask by rufans",
-  //   description: ` TelosTask is a marketplace platform for both micro and macro tasks. With Telostask, jobs are outsourced to professionals who will earn task tokens after completion.`,
-  //   tags: "#reactjs #stylesComponents #lottie",
-  //   url: "https://telostask.app/",
-  // },
-  {
-    name: "eCrea8",
-    image: "/images/e-creat8.png",
-    description:
-      "We transform your ideas into alluring digital realities and unleash boundless innovation. With a wide range of services, ranging from cybersecurity, UI/UX design, Front-end and Backend development, Project and Product management, we have all your digital aspirations covered.",
-    tags: "#tailwindcss #nextjs",
-    url: "https://ecrea8-website.vercel.app/",
+      "Druminant is a platform designed to help farmers efficiently manage their farmland and livestock. It offers different modules for farm admins to have full control over their operations, while farm staff can update and track farm activities. The system streamlines livestock care and management, centralizing important data to enhance productivity and ease of access.",
+    tags: "#Node.js #Express.js #MongoDB",
+    url: "https://druminant.vercel.app/login",
   },
   {
     name: "Discord-clone",
@@ -49,6 +16,49 @@ export const projects = [
     tags: "#reactjs #tailwindcss #firebase",
     url: "https://realrufans.github.io/discord-clone/",
   },
+  {
+    name: "Coinsino Finance",
+    image: "/images/coinsino.png",
+    description: `Coinsino Finance is a cutting-edge betting platform that utilizes web3 technology to offer advanced betting games. Users can join various betting pools to predict the outcome of different events. The platform also aims to support play-to-earn games through its Odd pool resources, making it a multi-level gaming and betting portal for both entertainment and profitability.`,
+    tags: "#Nextjs #Etherjs #Tailwindcss",
+    url: "https://coinsinoweb3.vercel.app/",
+  },
+
+  {
+    image: "/images/quicksave.png",
+    name: "Quicksave",
+    description:
+      "a Chrome extension tool that lets users seamlessly save their current tab to their Google Drive in one click.",
+    tags: "#GoogleApis #Chrome #Javascript",
+    url: "",
+  },
+  {
+    image: "/images/pdfcounter.png",
+    name: "PDF Keyword Counter",
+    description:
+      "Determine the number of times your keywords appear in a PDF document. Upload your PDF, enter keywords, and get keyword count results.",
+    tags: "#Node.js #Next.js #Javascript",
+    url: "https://pdf-keyword-counter-fontend.vercel.app",
+  },
+
+  // {
+  //   id: 0,
+  //   name: "Telostask Landing-page",
+  //   thumbnail: "/images/telostask.png",
+  //   alt: "telostask by rufans",
+  //   description: ` TelosTask is a marketplace platform for both micro and macro tasks. With Telostask, jobs are outsourced to professionals who will earn task tokens after completion.`,
+  //   tags: "#reactjs #stylesComponents #lottie",
+  //   url: "https://telostask.app/",
+  // },
+  {
+    name: "eCrea8 pages",
+    image: "/images/e-creat8.png",
+    description:
+      "We transform your ideas into alluring digital realities and unleash boundless innovation. With a wide range of services, ranging from cybersecurity, UI/UX design, Front-end and Backend development, Project and Product management, we have all your digital aspirations covered.",
+    tags: "#Tailwindcss #Next.js",
+    url: "https://ecrea8-website.vercel.app/",
+  },
+
   // {
   //   name: "Mydappr",
   //   image: "/images/mydappr.png",

@@ -16,7 +16,9 @@ function ShowCaseCard({ image, name, details, tags, link }) {
       </div>
       <div>
         <h1 className="text-xl  font-semibold mb-2">{name}</h1>
-        <p className="text-gray-600 dark:text-gray-400  line-clamp-3 font-serif ">{details}</p>
+        <p className="text-gray-600 dark:text-gray-400  line-clamp-3 font-serif ">
+          {details}
+        </p>
       </div>
       <div className="flex items-center justify-between mt-4">
         <div className="flex space-x-2 flex-wrap ">
@@ -33,7 +35,10 @@ function ShowCaseCard({ image, name, details, tags, link }) {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-semibold whitespace-nowrap text-white bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-2 rounded-full hover:from-orange-500 hover:to-orange-600 transition duration-300"
+          className={`text-sm font-semibold whitespace-nowrap text-white bg-gradient-to-r from-orange-400 to-orange-500 px-4 py-2 rounded-full hover:from-orange-500 hover:to-orange-600 transition duration-300 ${
+            !link &&
+            `bg-gray-700 cursor-not-allowed text-white bg-gradient-to-r from-gray-500 to-gray-500 hover:from-gray-500 hover:to-gray-500`
+          }`}
         >
           Live View
         </a>
